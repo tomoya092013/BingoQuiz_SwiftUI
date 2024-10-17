@@ -1,37 +1,69 @@
 import SwiftUI
 
 struct ContentView: View {
-  @State private var colors: [Color] = [.red, .blue, .purple, .yellow, .orange, .indigo, .cyan, .brown, .mint]
-  @State private var draggingItem: Color?
+  
+  @State private var sampleQuizItemList: [QuizItem] = [
+    .init(id: 1, answer: "A"),
+    .init(id: 2, answer: "B"),
+    .init(id: 3, answer: "B"),
+    .init(id: 4, answer: "A"),
+    .init(id: 5, answer: "B"),
+    .init(id: 6, answer: "C"),
+    .init(id: 7, answer: "C"),
+    .init(id: 8, answer: "C"),
+    .init(id: 9, answer: "B"),
+  ]
+  
+  @State private var draggingQuizItem: QuizItem?
+  @State private var showingModal = false
+  @State private var selectedId: Int?
   
   var body: some View {
     NavigationStack {
       GeometryReader{ geometry in
         let itemSize = max((geometry.size.width - 40) / 3, 0)
-        let columns = Array(repeating: GridItem(spacing: 10), count: 3)
-        LazyVGrid(columns: columns, spacing: 10, content: {
-          ForEach(colors, id: \.self) { color in
+        let columns = Array(repeating: GridItem(spacing: 20), count: 3)
+        LazyVGrid(columns: columns, spacing: 20, content: {
+          ForEach(sampleQuizItemList, id: \.self.id) { sampleQuizItem in
             RoundedRectangle(cornerRadius: 10)
-              .fill(color)
+              .stroke(Color.orange, lineWidth: 6)
+              .background(RoundedRectangle(cornerRadius: 10).fill(Color.orange.opacity(0.1)))
               .frame(width: itemSize, height: itemSize)
-              .draggable(color) {
+              .overlay(
+                HStack{
+                  Text("\(sampleQuizItem.id)")
+                    .font(.system(size: itemSize / 2.5))
+                    .fontWeight(.bold)
+                    .foregroundColor(.black)
+                  Text(sampleQuizItem.answer)
+                    .font(.system(size: itemSize / 2.5))
+                    .fontWeight(.bold)
+                    .foregroundColor(.black)
+                }
+                  .padding()
+              )
+              .onTapGesture {
+                selectedId = sampleQuizItem.id
+                showingModal = true
+              }
+              .draggable(sampleQuizItem) {
                 RoundedRectangle(cornerRadius: 10)
                   .fill(.ultraThinMaterial)
                   .frame(width: itemSize, height: itemSize)
                   .onAppear{
-                    draggingItem = color
+                    draggingQuizItem = sampleQuizItem
                   }
               }
-              .dropDestination(for: Color.self) { items, location in
-                draggingItem = nil
-                return false
+              .dropDestination(for: QuizItem.self) { items, location in
+                draggingQuizItem = nil
+                return true
               } isTargeted: { status in
-                if let draggingItem, status, draggingItem != color {
-                  if let sourceIndex = colors.firstIndex(of:draggingItem),
-                     let destinationIndex = colors.firstIndex(of: color){
+                if let draggingQuizItem, draggingQuizItem != sampleQuizItem {
+                  if let draggingIndex = sampleQuizItemList.firstIndex(of:draggingQuizItem),
+                     let destinationIndex = sampleQuizItemList.firstIndex(of: sampleQuizItem){
                     withAnimation(.bouncy) {
-                      let sourceItem = colors.remove(at: sourceIndex)
-                      colors.insert(sourceItem, at:destinationIndex)
+                      let dropItem = sampleQuizItemList.remove(at: draggingIndex)
+                      sampleQuizItemList.insert(dropItem, at:destinationIndex)
                     }
                   }
                 }
@@ -41,6 +73,11 @@ struct ContentView: View {
       }
       .padding(20)
       .navigationTitle("ドラッグ&ドロップ")
+      .sheet(isPresented: $showingModal) {
+        if let selectedId = selectedId {
+          AnswerModal(selectedId: selectedId)
+        }
+      }
     }
   }
 }

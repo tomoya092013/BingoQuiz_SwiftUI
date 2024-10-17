@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F06D3F12CC146EC00CFC63A /* QuizItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F06D3F02CC146EC00CFC63A /* QuizItem.swift */; };
+		9F06D3F42CC15A0A00CFC63A /* AnswerModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F06D3F32CC15A0A00CFC63A /* AnswerModal.swift */; };
 		9F5B69172CC001EF00D6EEAC /* Bingo_QuizApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B69162CC001EF00D6EEAC /* Bingo_QuizApp.swift */; };
 		9F5B69192CC001EF00D6EEAC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B69182CC001EF00D6EEAC /* ContentView.swift */; };
 		9F5B691B2CC001F600D6EEAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F5B691A2CC001F600D6EEAC /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F06D3F02CC146EC00CFC63A /* QuizItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizItem.swift; sourceTree = "<group>"; };
+		9F06D3F32CC15A0A00CFC63A /* AnswerModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerModal.swift; sourceTree = "<group>"; };
 		9F5B69132CC001EF00D6EEAC /* Bingo_Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bingo_Quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F5B69162CC001EF00D6EEAC /* Bingo_QuizApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bingo_QuizApp.swift; sourceTree = "<group>"; };
 		9F5B69182CC001EF00D6EEAC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +36,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F06D3ED2CC1469E00CFC63A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9F06D3F02CC146EC00CFC63A /* QuizItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9F06D3F22CC158C200CFC63A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F06D3F32CC15A0A00CFC63A /* AnswerModal.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		9F5B690A2CC001EF00D6EEAC = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +71,8 @@
 		9F5B69152CC001EF00D6EEAC /* Bingo_Quiz */ = {
 			isa = PBXGroup;
 			children = (
+				9F06D3F22CC158C200CFC63A /* View */,
+				9F06D3ED2CC1469E00CFC63A /* Model */,
 				9F5B69162CC001EF00D6EEAC /* Bingo_QuizApp.swift */,
 				9F5B69182CC001EF00D6EEAC /* ContentView.swift */,
 				9F5B691A2CC001F600D6EEAC /* Assets.xcassets */,
@@ -137,6 +159,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F06D3F12CC146EC00CFC63A /* QuizItem.swift in Sources */,
+				9F06D3F42CC15A0A00CFC63A /* AnswerModal.swift in Sources */,
 				9F5B69192CC001EF00D6EEAC /* ContentView.swift in Sources */,
 				9F5B69172CC001EF00D6EEAC /* Bingo_QuizApp.swift in Sources */,
 			);
