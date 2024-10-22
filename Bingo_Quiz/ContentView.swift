@@ -16,9 +16,12 @@ struct ContentView: View {
   
   @State private var draggingQuizItem: QuizItem?
   @State private var showingModal = false
-  @State private var selectedId: Int?
+  @State private var selectedId = 0
   
   var body: some View {
+    // これをしないと一度目のモーダル遷移で値が渡せない   なぜ。。。
+    let _ = print(selectedId)
+    
     NavigationStack {
       GeometryReader{ geometry in
         let itemSize = max((geometry.size.width - 40) / 3, 0)
@@ -56,9 +59,9 @@ struct ContentView: View {
               }
               .dropDestination(for: QuizItem.self) { items, location in
                 draggingQuizItem = nil
-                return true
+                return false
               } isTargeted: { status in
-                if let draggingQuizItem, draggingQuizItem != sampleQuizItem {
+                if let draggingQuizItem, status, draggingQuizItem != sampleQuizItem  {
                   if let draggingIndex = sampleQuizItemList.firstIndex(of:draggingQuizItem),
                      let destinationIndex = sampleQuizItemList.firstIndex(of: sampleQuizItem){
                     withAnimation(.bouncy) {
@@ -74,9 +77,7 @@ struct ContentView: View {
       .padding(20)
       .navigationTitle("ドラッグ&ドロップ")
       .sheet(isPresented: $showingModal) {
-        if let selectedId = selectedId {
-          AnswerModal(selectedId: selectedId)
-        }
+        AnswerModal(selectedId: selectedId)
       }
     }
   }
