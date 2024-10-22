@@ -15,13 +15,9 @@ struct ContentView: View {
   ]
   
   @State private var draggingQuizItem: QuizItem?
-  @State private var showingModal = false
-  @State private var selectedId = 0
+  @State private var selectedItem: QuizItem? = nil
   
   var body: some View {
-    // これをしないと一度目のモーダル遷移で値が渡せない   なぜ。。。
-    let _ = print(selectedId)
-    
     NavigationStack {
       GeometryReader{ geometry in
         let itemSize = max((geometry.size.width - 40) / 3, 0)
@@ -46,8 +42,7 @@ struct ContentView: View {
                   .padding()
               )
               .onTapGesture {
-                selectedId = sampleQuizItem.id
-                showingModal = true
+                selectedItem = sampleQuizItem
               }
               .draggable(sampleQuizItem) {
                 RoundedRectangle(cornerRadius: 10)
@@ -76,8 +71,8 @@ struct ContentView: View {
       }
       .padding(20)
       .navigationTitle("ドラッグ&ドロップ")
-      .sheet(isPresented: $showingModal) {
-        AnswerModal(selectedId: selectedId)
+      .sheet(item: $selectedItem) { selectedItem in
+        AnswerModal(selectedId: selectedItem.id)
       }
     }
   }
