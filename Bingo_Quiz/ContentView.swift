@@ -24,20 +24,21 @@ struct ContentView: View {
         let columns = Array(repeating: GridItem(spacing: 20), count: 3)
         LazyVGrid(columns: columns, spacing: 20, content: {
           ForEach(sampleQuizItemList, id: \.self.id) { sampleQuizItem in
+            let color = colorList[sampleQuizItem.id - 1]
             RoundedRectangle(cornerRadius: 10)
-              .stroke(Color.orange, lineWidth: 6)
-              .background(RoundedRectangle(cornerRadius: 10).fill(Color.orange.opacity(0.1)))
+              .stroke(Color.black, lineWidth: 1)
+              .background(RoundedRectangle(cornerRadius: 10).fill(color))
               .frame(width: itemSize, height: itemSize)
               .overlay(
                 HStack{
                   Text("\(sampleQuizItem.id)")
                     .font(.system(size: itemSize / 2.5))
                     .fontWeight(.bold)
-                    .foregroundColor(.black)
+                    .foregroundColor(.white)
                   Text(sampleQuizItem.answer)
                     .font(.system(size: itemSize / 2.5))
                     .fontWeight(.bold)
-                    .foregroundColor(.black)
+                    .foregroundColor(.white)
                 }
                   .padding()
               )

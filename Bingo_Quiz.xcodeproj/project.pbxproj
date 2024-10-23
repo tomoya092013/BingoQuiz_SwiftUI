@@ -13,6 +13,7 @@
 		9F5B69192CC001EF00D6EEAC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B69182CC001EF00D6EEAC /* ContentView.swift */; };
 		9F5B691B2CC001F600D6EEAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F5B691A2CC001F600D6EEAC /* Assets.xcassets */; };
 		9F5B691E2CC001F600D6EEAC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F5B691D2CC001F600D6EEAC /* Preview Assets.xcassets */; };
+		9FE9552B2CC920EF00DBC14C /* ColorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE9552A2CC920EF00DBC14C /* ColorList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		9F5B69182CC001EF00D6EEAC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9F5B691A2CC001F600D6EEAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F5B691D2CC001F600D6EEAC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9FE9552A2CC920EF00DBC14C /* ColorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		9F5B69152CC001EF00D6EEAC /* Bingo_Quiz */ = {
 			isa = PBXGroup;
 			children = (
+				9FE955272CC920B500DBC14C /* Utils */,
 				9F06D3F22CC158C200CFC63A /* View */,
 				9F06D3ED2CC1469E00CFC63A /* Model */,
 				9F5B69162CC001EF00D6EEAC /* Bingo_QuizApp.swift */,
@@ -87,6 +90,14 @@
 				9F5B691D2CC001F600D6EEAC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9FE955272CC920B500DBC14C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9FE9552A2CC920EF00DBC14C /* ColorList.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +173,7 @@
 				9F06D3F12CC146EC00CFC63A /* QuizItem.swift in Sources */,
 				9F06D3F42CC15A0A00CFC63A /* AnswerModal.swift in Sources */,
 				9F5B69192CC001EF00D6EEAC /* ContentView.swift in Sources */,
+				9FE9552B2CC920EF00DBC14C /* ColorList.swift in Sources */,
 				9F5B69172CC001EF00D6EEAC /* Bingo_QuizApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
