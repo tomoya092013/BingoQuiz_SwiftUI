@@ -19,6 +19,7 @@
 		9F8078B92CCCAD340022BE98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F8078B62CCCAD340022BE98 /* Assets.xcassets */; };
 		9F8078BB2CCCAD4C0022BE98 /* SnowParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8078BA2CCCAD420022BE98 /* SnowParticle.swift */; };
 		9FB44A332CCCEA5A00916FE0 /* CustomeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB44A322CCCEA5A00916FE0 /* CustomeSlider.swift */; };
+		9FB44A352CCD2ABB00916FE0 /* CreateUserId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB44A342CCD2ABB00916FE0 /* CreateUserId.swift */; };
 		9FBCCC512CCB969C0033BF09 /* BingoObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBCCC502CCB969C0033BF09 /* BingoObject.swift */; };
 		9FE9552B2CC920EF00DBC14C /* ColorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE9552A2CC920EF00DBC14C /* ColorList.swift */; };
 		9FE9552D2CC926F000DBC14C /* BingoSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE9552C2CC926F000DBC14C /* BingoSheetView.swift */; };
@@ -43,6 +44,7 @@
 		9F8078B72CCCAD340022BE98 /* SnowParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SnowParticle.sks; sourceTree = "<group>"; };
 		9F8078BA2CCCAD420022BE98 /* SnowParticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowParticle.swift; sourceTree = "<group>"; };
 		9FB44A322CCCEA5A00916FE0 /* CustomeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeSlider.swift; sourceTree = "<group>"; };
+		9FB44A342CCD2ABB00916FE0 /* CreateUserId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserId.swift; sourceTree = "<group>"; };
 		9FBCCC502CCB969C0033BF09 /* BingoObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingoObject.swift; sourceTree = "<group>"; };
 		9FE9552A2CC920EF00DBC14C /* ColorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorList.swift; sourceTree = "<group>"; };
 		9FE9552C2CC926F000DBC14C /* BingoSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingoSheetView.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			children = (
 				9FE9552A2CC920EF00DBC14C /* ColorList.swift */,
 				9FE9553D2CC942B300DBC14C /* DataLoad.swift */,
+				9FB44A342CCD2ABB00916FE0 /* CreateUserId.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				9F5B69192CC001EF00D6EEAC /* ContentView.swift in Sources */,
 				9F8078BB2CCCAD4C0022BE98 /* SnowParticle.swift in Sources */,
 				9FE9552F2CC92AD700DBC14C /* CreateGroupView.swift in Sources */,
+				9FB44A352CCD2ABB00916FE0 /* CreateUserId.swift in Sources */,
 				9FE955312CC92B3C00DBC14C /* JoinedGroupsView.swift in Sources */,
 				9FBCCC512CCB969C0033BF09 /* BingoObject.swift in Sources */,
 				9FE9553B2CC9409300DBC14C /* GroupData.json in Sources */,
