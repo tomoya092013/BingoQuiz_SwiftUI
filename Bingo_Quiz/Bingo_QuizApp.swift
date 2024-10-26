@@ -1,10 +1,3 @@
-//
-//  Bingo_QuizApp.swift
-//  Bingo_Quiz
-//
-//  Created by 根岸智也 on 2024/10/16.
-//
-
 import SwiftUI
 
 @main
