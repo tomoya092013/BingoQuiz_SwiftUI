@@ -18,6 +18,7 @@
 		9F8078B82CCCAD340022BE98 /* SnowParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9F8078B72CCCAD340022BE98 /* SnowParticle.sks */; };
 		9F8078B92CCCAD340022BE98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F8078B62CCCAD340022BE98 /* Assets.xcassets */; };
 		9F8078BB2CCCAD4C0022BE98 /* SnowParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8078BA2CCCAD420022BE98 /* SnowParticle.swift */; };
+		9FB44A332CCCEA5A00916FE0 /* CustomeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB44A322CCCEA5A00916FE0 /* CustomeSlider.swift */; };
 		9FBCCC512CCB969C0033BF09 /* BingoObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBCCC502CCB969C0033BF09 /* BingoObject.swift */; };
 		9FE9552B2CC920EF00DBC14C /* ColorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE9552A2CC920EF00DBC14C /* ColorList.swift */; };
 		9FE9552D2CC926F000DBC14C /* BingoSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE9552C2CC926F000DBC14C /* BingoSheetView.swift */; };
@@ -41,6 +42,7 @@
 		9F8078B62CCCAD340022BE98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F8078B72CCCAD340022BE98 /* SnowParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SnowParticle.sks; sourceTree = "<group>"; };
 		9F8078BA2CCCAD420022BE98 /* SnowParticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowParticle.swift; sourceTree = "<group>"; };
+		9FB44A322CCCEA5A00916FE0 /* CustomeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeSlider.swift; sourceTree = "<group>"; };
 		9FBCCC502CCB969C0033BF09 /* BingoObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingoObject.swift; sourceTree = "<group>"; };
 		9FE9552A2CC920EF00DBC14C /* ColorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorList.swift; sourceTree = "<group>"; };
 		9FE9552C2CC926F000DBC14C /* BingoSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingoSheetView.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				9F5E00A42CCA8AE600218926 /* TextFieldWithLabel.swift */,
 				9F8078B02CCCA2240022BE98 /* ButtonWithOutline.swift */,
 				9FBCCC502CCB969C0033BF09 /* BingoObject.swift */,
+				9FB44A322CCCEA5A00916FE0 /* CustomeSlider.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				9FBCCC512CCB969C0033BF09 /* BingoObject.swift in Sources */,
 				9FE9553B2CC9409300DBC14C /* GroupData.json in Sources */,
 				9FE9552B2CC920EF00DBC14C /* ColorList.swift in Sources */,
+				9FB44A332CCCEA5A00916FE0 /* CustomeSlider.swift in Sources */,
 				9F5B69172CC001EF00D6EEAC /* Bingo_QuizApp.swift in Sources */,
 				9FE955362CC93DF900DBC14C /* GroupViewModel.swift in Sources */,
 			);

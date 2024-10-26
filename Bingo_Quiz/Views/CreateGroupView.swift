@@ -8,7 +8,6 @@ struct CreateGroupView: View {
   @State private var passphrase: String = ""
   
   var body: some View {
-    
     VStack(spacing: 20){
       TextFieldWithLabel(label: "グループ名", placeholder: "グループ名を入力してください", text: $groupName)
       TextFieldWithLabel(label: "あいことば", placeholder: "あいことばを入力してください", text: $passphrase)
@@ -21,9 +20,9 @@ struct CreateGroupView: View {
               .frame(width: 80)
             Text("\(Int(quizTypeRatio))")
           }
-          Slider(
+          CustomSlider(
             value: $quizTypeRatio,
-            in: 0...MAX,
+            range: 0...MAX,
             step: 1
           )
           VStack{
