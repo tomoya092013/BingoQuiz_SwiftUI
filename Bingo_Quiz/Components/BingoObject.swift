@@ -1,12 +1,14 @@
 import SwiftUI
 
-struct VibrationObject: View {
+struct BingoObject: View {
   
-  @State var animate = false
+//  アニメーションさせると画面が上下にうごいてしまうのでコメントアウト
+//  @State private var animate = false
   
   var body: some View {
     let itemSize: CGFloat = 80
     let columns = Array(repeating: GridItem(spacing: 1), count: 3)
+    
     LazyVGrid(columns: columns, spacing: 1) {
       ForEach(ColorList, id: \.self) { color in
         Rectangle()
@@ -17,13 +19,15 @@ struct VibrationObject: View {
           ))
           .frame(width: itemSize, height: itemSize)
           .cornerRadius(10)
-          .rotationEffect(.degrees(animate ? -3 : 3),anchor: .center)
-          .scaleEffect(animate ? 0.9 : 1.0)
-          .onAppear {
-            withAnimation(Animation.linear(duration: 3).repeatForever(autoreverses: true)) {
-              animate.toggle()
-            }
-          }
+          .rotationEffect(.degrees(3))
+        
+//          .rotationEffect(.degrees(animate ? -3 : 3), anchor: .center)
+//          .scaleEffect(animate ? 0.9 : 1.0)
+//          .onAppear {
+//            withAnimation(Animation.linear(duration: 3).repeatForever(autoreverses: true)) {
+//              animate.toggle()
+//            }
+//          }
       }
     }
     .frame(width: 200, height: 300)
