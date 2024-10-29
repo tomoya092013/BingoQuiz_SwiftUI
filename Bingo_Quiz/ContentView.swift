@@ -44,14 +44,16 @@ struct ContentView: View {
                 .padding(.top, 10)
               }
               HStack(spacing: 10) {
-                ButtonWithOutline(
-                  text: "参加グループ一覧",
-                  width: geometry.size.width * 0.5,
-                  height: 70,
-                  backgroundColor: Color.white,
-                  borderColor: Color.orange,
-                  fontSize: .system(.title2, design: .rounded)
-                )
+                NavigationLink(destination: JoinedGroupsView()) {
+                  ButtonWithOutline(
+                    text: "参加グループ一覧",
+                    width: geometry.size.width * 0.5,
+                    height: 70,
+                    backgroundColor: Color.white,
+                    borderColor: Color.orange,
+                    fontSize: .system(.title2, design: .rounded)
+                  )
+                }
                 ButtonWithOutline(
                   text: "検索",
                   width: geometry.size.width * 0.3,

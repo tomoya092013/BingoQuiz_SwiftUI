@@ -1,5 +1,26 @@
-  [
-    {"id": "0", "name": "パーティー"},
-    {"id": "1", "name": "ビンゴ大会"},
-    {"id": "2", "name": "遊ぼう"}
-  ]
+[
+  {
+    "id": "0",
+    "createUserId": "negi",
+    "name": "パーティー",
+    "passPhrase": "aaa",
+    "surveyCount": 4,
+    "createDate":  "2023-10-26T00:00:00Z"
+  },
+  {
+    "id": "1",
+    "createUserId": "negi",
+    "name": "ビンゴ大会",
+    "passPhrase": "bbb",
+    "surveyCount": 0,
+    "createDate": "2023-10-27T00:00:00Z"
+  },
+  {
+    "id": "2",
+    "createUserId": "negi",
+    "name": "遊ぼう",
+    "passPhrase": "ccc",
+    "surveyCount": 0,
+    "createDate": "2023-10-28T00:00:00Z"
+  }
+]
