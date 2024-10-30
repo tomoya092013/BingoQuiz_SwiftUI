@@ -1,7 +1,7 @@
 import FirebaseStorage
 import SwiftUI
 
-class ImageUploader {
+class FirebaseStorageService {
   func uploadImage(_ image: UIImage, _ pathName: String, completion: @escaping (String?) -> Void) {
     guard let imageData = image.jpegData(compressionQuality: 0.8) else {
       completion(nil)
@@ -28,6 +28,17 @@ class ImageUploader {
         
         completion(downloadURL.absoluteString)
       }
+    }
+  }
+  
+  func deleteImage(_ pathName: String) async {
+    let storage = Storage.storage()
+    let storageRef = storage.reference()
+    let imageRef = storageRef.child("images/\(pathName).jpg")
+    do {
+      try await imageRef.delete()
+    } catch let error as NSError {
+      print("Error delete image: \(error.localizedDescription)")
     }
   }
 }

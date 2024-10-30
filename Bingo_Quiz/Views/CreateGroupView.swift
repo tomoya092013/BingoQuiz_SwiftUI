@@ -11,7 +11,7 @@ struct CreateGroupView: View {
   @State var selectedImage: UIImage?
   @State private var imageUrl: String = ""
   @State private var pathName: String = UUID().uuidString
-  private let imageUploader = ImageUploader()
+  private let firebaseStorageService = FirebaseStorageService()
   
   var body: some View {
     VStack(spacing: 20){
@@ -24,6 +24,9 @@ struct CreateGroupView: View {
             .font(.headline)
             .frame(maxWidth: .infinity, alignment: .leading)
           Button(action: {
+            Task{
+              await firebaseStorageService.deleteImage(pathName)
+            }
             selectedImage = nil
             selectedItem = nil
           }) {
@@ -51,8 +54,10 @@ struct CreateGroupView: View {
             guard let data = try? await selectedItem?.loadTransferable(type: Data.self) else { return }
             guard let uiImage = UIImage(data: data) else { return }
             selectedImage = uiImage            
-            imageUploader.uploadImage(uiImage, pathName) { downloadURL in
+            firebaseStorageService.uploadImage(uiImage, pathName) { downloadURL in
               guard let url = downloadURL else {
+                selectedImage = nil
+                selectedItem = nil
                 print("Failed to upload image.")
                 return
               }
