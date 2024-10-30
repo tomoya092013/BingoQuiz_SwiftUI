@@ -3,6 +3,10 @@ import FirebaseCore
 
 @main
 struct Bingo_QuizApp: App {
+  init() {
+    createUserId()
+  }
+  
   @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
   
   var body: some Scene {

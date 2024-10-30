@@ -9,6 +9,9 @@ struct CreateGroupView: View {
   @State private var quizTypeRatio = 0.0
   @State var selectedItem: PhotosPickerItem?
   @State var selectedImage: UIImage?
+  @State private var imageUrl: String = ""
+  @State private var pathName: String = UUID().uuidString
+  private let imageUploader = ImageUploader()
   
   var body: some View {
     VStack(spacing: 20){
@@ -47,7 +50,14 @@ struct CreateGroupView: View {
           Task {
             guard let data = try? await selectedItem?.loadTransferable(type: Data.self) else { return }
             guard let uiImage = UIImage(data: data) else { return }
-            selectedImage = uiImage
+            selectedImage = uiImage            
+            imageUploader.uploadImage(uiImage, pathName) { downloadURL in
+              guard let url = downloadURL else {
+                print("Failed to upload image.")
+                return
+              }
+              imageUrl = url
+            }
           }
         }
       }

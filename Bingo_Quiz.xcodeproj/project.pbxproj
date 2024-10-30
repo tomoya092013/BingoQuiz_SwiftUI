@@ -32,6 +32,7 @@
 		9FE955392CC93E9F00DBC14C /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE955382CC93E9F00DBC14C /* Group.swift */; };
 		9FE9553B2CC9409300DBC14C /* GroupData.json in Sources */ = {isa = PBXBuildFile; fileRef = 9FE9553A2CC9406600DBC14C /* GroupData.json */; };
 		9FE9553E2CC942B300DBC14C /* DataLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE9553D2CC942B300DBC14C /* DataLoad.swift */; };
+		9FE9A7062CD26587005F9AB4 /* FirebaseStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE9A7052CD26587005F9AB4 /* FirebaseStorageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		9FE955382CC93E9F00DBC14C /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		9FE9553A2CC9406600DBC14C /* GroupData.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = GroupData.json; sourceTree = "<group>"; };
 		9FE9553D2CC942B300DBC14C /* DataLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoad.swift; sourceTree = "<group>"; };
+		9FE9A7052CD26587005F9AB4 /* FirebaseStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				9F06D3F22CC158C200CFC63A /* Views */,
 				9FE955342CC93DDC00DBC14C /* ViewModels */,
 				9F06D3ED2CC1469E00CFC63A /* Models */,
+				9FE9A7012CD26452005F9AB4 /* Services */,
 				9FE955272CC920B500DBC14C /* Utils */,
 				9FE9553F2CC942E500DBC14C /* Resources */,
 				9F5B69182CC001EF00D6EEAC /* ContentView.swift */,
@@ -172,6 +175,14 @@
 				9FE9553A2CC9406600DBC14C /* GroupData.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		9FE9A7012CD26452005F9AB4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9FE9A7052CD26587005F9AB4 /* FirebaseStorageService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +265,7 @@
 				9FE955392CC93E9F00DBC14C /* Group.swift in Sources */,
 				9F8078B12CCCA2240022BE98 /* ButtonWithOutline.swift in Sources */,
 				9FE9552D2CC926F000DBC14C /* BingoSheetView.swift in Sources */,
+				9FE9A7062CD26587005F9AB4 /* FirebaseStorageService.swift in Sources */,
 				9F06D3F12CC146EC00CFC63A /* BingoSheetItem.swift in Sources */,
 				9FE9553E2CC942B300DBC14C /* DataLoad.swift in Sources */,
 				9F06D3F42CC15A0A00CFC63A /* AnswerModal.swift in Sources */,
