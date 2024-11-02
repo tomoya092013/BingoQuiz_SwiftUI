@@ -33,6 +33,7 @@
 		9FE9553B2CC9409300DBC14C /* GroupData.json in Sources */ = {isa = PBXBuildFile; fileRef = 9FE9553A2CC9406600DBC14C /* GroupData.json */; };
 		9FE9553E2CC942B300DBC14C /* DataLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE9553D2CC942B300DBC14C /* DataLoad.swift */; };
 		9FE9A7062CD26587005F9AB4 /* FirebaseStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE9A7052CD26587005F9AB4 /* FirebaseStorageService.swift */; };
+		9FFCC6962CD5B5FC008CF7D4 /* CreateQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFCC6952CD5B5FC008CF7D4 /* CreateQuiz.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		9FE9553A2CC9406600DBC14C /* GroupData.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = GroupData.json; sourceTree = "<group>"; };
 		9FE9553D2CC942B300DBC14C /* DataLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoad.swift; sourceTree = "<group>"; };
 		9FE9A7052CD26587005F9AB4 /* FirebaseStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageService.swift; sourceTree = "<group>"; };
+		9FFCC6952CD5B5FC008CF7D4 /* CreateQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuiz.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				9FE9552C2CC926F000DBC14C /* BingoSheetView.swift */,
 				9FE9552E2CC92AD700DBC14C /* CreateGroupView.swift */,
 				9FE955302CC92B3C00DBC14C /* JoinedGroupsView.swift */,
+				9FFCC6952CD5B5FC008CF7D4 /* CreateQuiz.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				9FBCCC512CCB969C0033BF09 /* BingoObject.swift in Sources */,
 				9FE9553B2CC9409300DBC14C /* GroupData.json in Sources */,
 				9FE9552B2CC920EF00DBC14C /* ColorList.swift in Sources */,
+				9FFCC6962CD5B5FC008CF7D4 /* CreateQuiz.swift in Sources */,
 				9FB44A332CCCEA5A00916FE0 /* CustomeSlider.swift in Sources */,
 				9F5B69172CC001EF00D6EEAC /* Bingo_QuizApp.swift in Sources */,
 				9FE955362CC93DF900DBC14C /* GroupViewModel.swift in Sources */,

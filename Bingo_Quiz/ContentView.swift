@@ -1,8 +1,14 @@
 import SwiftUI
 
 struct ContentView: View {
+  
+  public enum AppPath {
+    case newGroup, createQuiz, groupList
+  }
+  @State public var navigatePath: [AppPath] = []
+  
   var body: some View {
-    NavigationStack {
+    NavigationStack(path: $navigatePath) {
       
       ZStack {
         RadialGradient(
@@ -32,27 +38,30 @@ struct ContentView: View {
             Spacer()
             
             VStack(spacing: 10) {
-              NavigationLink(destination: CreateGroupView()) {
+              ButtonWithOutline(
+                text: "新規作成",
+                width: geometry.size.width * 0.8,
+                height: 70,
+                backgroundColor: Color.white,
+                borderColor: Color.orange,
+                fontSize: .system(.title2, design: .rounded)
+              )
+              .padding(.top, 10)
+              .onTapGesture {
+                navigatePath.append(.newGroup)
+              }
+              
+              HStack(spacing: 10) {
                 ButtonWithOutline(
-                  text: "新規作成",
-                  width: geometry.size.width * 0.8,
+                  text: "参加グループ一覧",
+                  width: geometry.size.width * 0.5,
                   height: 70,
                   backgroundColor: Color.white,
                   borderColor: Color.orange,
                   fontSize: .system(.title2, design: .rounded)
                 )
-                .padding(.top, 10)
-              }
-              HStack(spacing: 10) {
-                NavigationLink(destination: JoinedGroupsView()) {
-                  ButtonWithOutline(
-                    text: "参加グループ一覧",
-                    width: geometry.size.width * 0.5,
-                    height: 70,
-                    backgroundColor: Color.white,
-                    borderColor: Color.orange,
-                    fontSize: .system(.title2, design: .rounded)
-                  )
+                .onTapGesture {
+                  navigatePath.append(.groupList)
                 }
                 ButtonWithOutline(
                   text: "検索",
@@ -69,11 +78,17 @@ struct ContentView: View {
           .frame(maxWidth: .infinity, alignment: .center)
         }
       }
+      .navigationDestination(for: AppPath.self) { path in
+        switch path {
+        case .newGroup:
+          CreateGroupView(path: $navigatePath)
+        case .createQuiz:
+          CreateQuiz(path: $navigatePath)
+        case .groupList:
+          JoinedGroupsView(path: $navigatePath)
+          
+        }
+      }
     }
   }
-}
-
-
-#Preview {
-  ContentView()
 }

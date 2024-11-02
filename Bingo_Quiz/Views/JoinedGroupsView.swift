@@ -2,6 +2,8 @@ import SwiftUI
 
 struct JoinedGroupsView: View {
   
+  @Binding var path:[ContentView.AppPath]
+  
   // モックデータ取得
   @ObservedObject var GroupVM = GroupViewModel()
   
@@ -20,8 +22,4 @@ struct JoinedGroupsView: View {
       .background(Color.blue.opacity(0.3))
     }
   }
-}
-
-#Preview {
-  JoinedGroupsView()
 }
